@@ -1,13 +1,18 @@
-async function publishRelease (release) {
+async function publishRelease({ github, draftRelease, githubOptions }){
+  let release = draftRelease
   let githubOpts = {
-    ...githubBaseOpts,
+    ...githubOptions,
     release_id: release.id,
     tag_name: release.tag_name,
     draft: false
   }
-  return github.repos.editRelease(githubOpts)
+  await github.repos.editRelease(githubOpts)
+  /*
     .catch(err => {
-      console.log(`${fail} Error publishing release:`, err)
+      console.log(`Error publishing release:`, err)
       process.exit(1)
     })
+    */
+  return true
 }
+module.exports = publishRelease

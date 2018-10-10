@@ -55,7 +55,7 @@ let tasks = [
     await sleep(2 * 1000)
     return { pkgJson }
   }]
-  // TODO required attributes: name, version
+  // TODO required attributes: name, version, repository.url as .git url
   ,['Validate package.json', async () => true]
   // TODO decide on release strategy based on tokens in .env
   // TODO or get pk encrypted .env from API
@@ -65,15 +65,14 @@ let tasks = [
   ,['Build app', //pkgJson.name
   async () => {
     // TODO test that script is included in pkgJson
-    let result = await runScript('npm run build', [], process.cwd())
+    // let result = await runScript('npm run build', [], process.cwd())
+    let result = await runScript('yarn run build', [], process.cwd())
     return result
   }]
 ]
 // TODO generate lander?
 
-
-
-tasks = [...tasks, ...electronTasks]
+tasks = [...tasks, ...electronTasks, ...githubTasks]
 
 // start: async wrapper
 const run = async () => {

@@ -12,6 +12,7 @@
   "author": "philipplgh",
   "license": "ISC",
   "dependencies": {
+    "@octokit/rest": "^15.13.1",
     "asar": "^0.14.5",
     "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
