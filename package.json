@@ -1,10 +1,10 @@
 {
-  "name": "create-react-app-release",
+  "name": "create-react-app-deploy",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "react-scripts-release": "./bin/release-script.js"
+    "react-scripts-deploy": "./bin/release-script.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

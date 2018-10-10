@@ -5,12 +5,9 @@ const log = console.log;
 
 const parsePgkJson = require('./tasks/parsePackageJson')
 const parseEnv = require('./tasks/parseEnv')
-const createChecksums = require('./tasks/createChecksums')
-
 
 const githubTasks = require('./tasks/github')
 const electronTasks = require('./tasks/electron')
-
 
 const runScript = require('../lib/run-script')
 
