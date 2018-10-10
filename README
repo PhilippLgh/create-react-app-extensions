@@ -1,0 +1,12 @@
+
+yarn add [package name]
+
+add release script to package.json
+"release": "react-scripts-release github",
+
+
+# Package spec
+TODO
+
+# Changelog file
+TODO

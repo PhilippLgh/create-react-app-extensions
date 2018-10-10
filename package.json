@@ -1,0 +1,20 @@
+{
+  "name": "create-react-app-release",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "react-scripts-release": "./bin/release-script.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "philipplgh",
+  "license": "ISC",
+  "dependencies": {
+    "asar": "^0.14.5",
+    "chalk": "^2.4.1",
+    "dotenv": "^6.1.0",
+    "ora": "^3.0.0"
+  }
+}
