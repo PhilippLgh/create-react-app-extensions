@@ -1,12 +1,15 @@
 const buildBackend = require('./buildBackend')
 const packageApp = require('./packageApp')
 const createChecksums = require('../createChecksums')
-const createMetadata = require('./createMetadata')
+const createAppMetadata = require('./createPackageMetadata')
+const createPackageMetadata = require('./createPackageMetadata')
 const writeMetadata = require('./writeMetadata')
 
 
 let electronTasks = [
-  ['Build backend', buildBackend ]
+   ['Build backend', buildBackend ]
+  ,['Generate app metadata', createAppMetadata]
+  ,['Write metadata', writeMetadata ]
   ,['Package app', 
   async ({ pkgJson }) => {
     let appPath = await packageApp(pkgJson)
@@ -17,7 +20,7 @@ let electronTasks = [
   // TODO optimize module imports
   // TODO sign (ledger, trezor)
   ,['Generate app checksums', async ({ appPath }) => await createChecksums(appPath) ]
-  ,['Generate metadata', createMetadata ]
+  ,['Generate package metadata', createPackageMetadata ]
   ,['Write metadata', writeMetadata ]
 ]
 
