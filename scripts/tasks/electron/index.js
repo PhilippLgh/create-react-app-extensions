@@ -1,7 +1,7 @@
 const buildBackend = require('./buildBackend')
 const packageApp = require('./packageApp')
 const createChecksums = require('../createChecksums')
-const createAppMetadata = require('./createPackageMetadata')
+const createAppMetadata = require('./createAppMetadata')
 const createPackageMetadata = require('./createPackageMetadata')
 const writeMetadata = require('./writeMetadata')
 
