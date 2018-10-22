@@ -45,6 +45,10 @@ const run = async (tasks) => {
       name = name(env)
     }
     let fn = task[1] || Promise.resolve()
+    if(typeof fn !== 'function'){
+      failed('Tasks 2nd parameter is not a function')
+      return
+    }
     startTask(name)
     try {
       let result = await fn(env)
