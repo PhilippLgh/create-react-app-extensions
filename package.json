@@ -1,8 +1,8 @@
 {
   "name": "create-react-app-extensions",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "create-react-app's missing deploy script...",
+  "main": "scripts/index.js",
   "bin": {
     "react-scripts-ext": "./bin/react-scripts-ext.js"
   },
@@ -13,9 +13,22 @@
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^15.13.1",
+    "adm-zip": "^0.4.13",
     "asar": "^0.14.5",
     "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
     "ora": "^3.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilippLgh/create-react-app-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PhilippLgh/create-react-app-extensions/issues"
+  },
+  "homepage": "https://github.com/PhilippLgh/create-react-app-extensions#readme"
 }
