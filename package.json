@@ -17,6 +17,7 @@
     "asar": "^0.14.5",
     "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
+    "fs-extra": "^7.0.1",
     "ora": "^3.0.0"
   },
   "directories": {
