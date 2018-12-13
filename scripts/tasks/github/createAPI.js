@@ -2,7 +2,7 @@ const GitHub = require('@octokit/rest')
 
 function run(){
   const github = new GitHub()
-  github.authenticate({type: 'token', token: process.env.GITHUB_TOKEN})
+  github.authenticate({type: 'token', token: process.env.GH_TOKEN})
   return {
     github
   }
