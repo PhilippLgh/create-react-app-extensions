@@ -31,7 +31,7 @@ const buildTasks = [
   }]
 ]
 
-let tasks =  [...initTasks, ...buildTasks ,...electronTasks/*, ...githubTasks*/]
+let tasks =  [...initTasks, ...buildTasks ,...electronTasks, ...githubTasks]
 
 //console.log('run tasks\n', tasks.map(task => task[0]).join('\n'))
 
