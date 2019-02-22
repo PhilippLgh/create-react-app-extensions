@@ -18,6 +18,7 @@ function handleError(err){
 
 switch (script) {
   case 'deploy':
+  case 'package':
   case 'build': {
     try{
       let child = spawn('node',

@@ -13,12 +13,14 @@ async function run({ pkgJson, checksums, appPath }) {
   let name = pkgJson.name
   let version = pkgJson.version
   let channel = 'alpha'
+  let icon = ""
   const size = fs.statSync(appPath).size
 
   let metadata = {
     name,
     version,
     channel,
+    icon,
     notes: '',
     size,
     dependencies: {

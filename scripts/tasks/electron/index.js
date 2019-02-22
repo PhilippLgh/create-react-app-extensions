@@ -5,6 +5,8 @@ const createAppMetadata = require('./createAppMetadata')
 const createPackageMetadata = require('./createPackageMetadata')
 const writeMetadata = require('./writeMetadata')
 
+const signPackage = require('../signPackage')
+
 const fs = require('fs')
 
 let electronTasks = [
@@ -23,7 +25,8 @@ let electronTasks = [
   // TODO compress 
   // see https://github.com/facebook/create-react-app/issues/1908
   // TODO optimize module imports
-  // TODO sign (ledger, trezor)
+  ,['Sign app', signPackage]
+  // TODO can probably be removed if signed:
   ,['Generate app checksums', async ({ appPath }) => await createChecksums(appPath) ]
   ,['Generate package metadata', createPackageMetadata ]
   ,['Write metadata', writeMetadata ]

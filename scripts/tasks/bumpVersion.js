@@ -22,8 +22,6 @@
       }
       console.log('release version', version)
     }
-
-
     
     if (writeChanges) {
       console.log('overwriting package.json version')
