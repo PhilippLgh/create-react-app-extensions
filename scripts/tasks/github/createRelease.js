@@ -1,8 +1,7 @@
 
-async function run({ github, pkgJson, githubOptions }){
+async function run({ pkgJson, channel, github, githubOptions }){
 
   let version = pkgJson.version
-  let channel = 'alpha'
   let ts = Math.floor(new Date().getTime() / 1000)
 
   let response = await github.repos.createRelease({

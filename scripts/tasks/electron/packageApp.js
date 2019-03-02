@@ -21,10 +21,10 @@ const addFile = (src, file, zip) => {
   }
 };
 
-function packageApp(packageJson) {
+function packageApp(packageJson, channel) {
   const src = path.resolve('./build');
   const dest = path.resolve(
-    `./build/${packageJson.name}_${packageJson.version}.zip`
+    `./build/${packageJson.name}_${packageJson.version}_${channel}.zip`
   );
 
   const zip = new AdmZip();

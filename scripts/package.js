@@ -30,15 +30,6 @@ const buildTasks = [
   }]
 ]
 
-const buildOutpath = pkgPath => {
-  let ext = path.extname(pkgPath)
-  const basename = path.basename(pkgPath, ext)
-  // ext = '.epk'
-  const dirname = path.dirname(pkgPath)
-  const pkgPathOut = `${dirname}/${basename}_signed${ext}`
-  return pkgPathOut
-}
-
 let tasks =  [...initTasks, ...buildTasks ,...electronTasks]
 
 //console.log('run tasks\n', tasks.map(task => task[0]).join('\n'))

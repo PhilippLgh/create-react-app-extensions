@@ -18,8 +18,8 @@ let electronTasks = [
   ,['Generate app metadata', createAppMetadata]
   ,['Write metadata', writeMetadata ]
   ,['Package app', 
-  async ({ pkgJson }) => {
-    let appPath = await packageApp(pkgJson)
+  async ({ pkgJson, channel }) => {
+    let appPath = await packageApp(pkgJson, channel)
     return {appPath}
   }]
   // TODO compress 

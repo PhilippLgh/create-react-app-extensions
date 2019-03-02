@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const shasum = require('../../../lib/shasum')
 
-async function run({ pkgJson}) {
+async function run({ pkgJson, channel }) {
 
   const basePath = process.cwd()
 
@@ -15,7 +15,6 @@ async function run({ pkgJson}) {
 
   let name = pkgJson.name
   let version = pkgJson.version
-  let channel = 'alpha'
   let icon = ""
   const size = 0 //fs.statSync(appPath).size
 

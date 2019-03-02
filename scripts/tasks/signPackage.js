@@ -6,7 +6,7 @@ const run = async ({ appPath }) => {
     return true // dont display failed: signing not mandatory
   }
   // FIXME instead of keeping pk in temp var let pkgsign handle complete flow
-  const privateKey = await util.getPrivateKeyFromKeystore(process.env.ETH_KEYSTORE, process.env.ETH_KEYSTORE_PW)
+  const privateKey = process.env.ETH_PRIVATE_KEY || await util.getPrivateKeyFromKeystore(process.env.ETH_KEYSTORE, process.env.ETH_KEYSTORE_PW)
   const pkg = await pkgsign.sign(appPath, privateKey)
   if(pkg) {
     const outPath = appPath // buildOutpath(appPath)
