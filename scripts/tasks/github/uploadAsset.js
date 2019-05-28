@@ -11,11 +11,13 @@ async function uploadAsset (github, filePath, release, githubOptions) {
     ...githubOptions,
     url: release.upload_url,
     file: fs.createReadStream(filePath),
-    contentType,
-    contentLength,
-    name: fileName
+    name: fileName,
+    headers: {
+      'content-type': contentType,
+      'content-length': contentLength
+    }
   }
-  await github.repos.uploadAsset(githubOpts)
+  await github.repos.uploadReleaseAsset(githubOpts)
   /*
   .catch(err => {
     console.log(`Error uploading ${filePath} to GitHub:`, err)
